@@ -1,0 +1,20 @@
+--- origsrc/kcalcore-16.08.3/src/versit/vcc.c	2016-10-14 00:26:16.000000000 -0500
++++ src/kcalcore-16.08.3/src/versit/vcc.c	2016-11-13 21:00:37.810952700 -0600
+@@ -163,6 +163,7 @@ DFARS 252.227-7013 or 48 CFR 52.227-19,
+ #define _SUPPORT_LINE_FOLDING 1
+ #endif
+ 
++#define _DEFAULT_SOURCE
+ #include <string.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+--- origsrc/kcalcore-16.08.3/src/versit/vobject.c	2016-10-14 00:26:16.000000000 -0500
++++ src/kcalcore-16.08.3/src/versit/vobject.c	2016-11-13 21:00:51.368005600 -0600
+@@ -42,6 +42,7 @@ DFARS 252.227-7013 or 48 CFR 52.227-19,
+  * vobject, and convert a vobject into its textual representation.
+  */
+ 
++#define _DEFAULT_SOURCE
+ #include <stdlib.h>
+ 
+ #include "vobject.h"

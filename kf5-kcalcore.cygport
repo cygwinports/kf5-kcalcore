@@ -1,0 +1,26 @@
+inherit kf5
+
+NAME="kf5-kcalcore"
+VERSION=16.08.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE calendar core library"
+DESCRIPTION="This library provides access to and handling of calendar data. It
+supports the standard formats iCalendar and vCalendar and the group scheduling
+standard iTIP."
+
+PATCH_URI="16.08-cygwin-ftm.patch"
+
+PKG_NAMES="libKF5CalendarCore5 libKF5CalendarCore-devel"
+libKF5CalendarCore5_CONTENTS="
+	usr/bin/cygKF5CalendarCore-5.dll
+	usr/share/doc/${NAME}
+"
+libKF5CalendarCore_devel_REQUIRES="libKF5KDELibs4Support-devel libical-devel"
+libKF5CalendarCore_devel_CONTENTS="
+	usr/include/KF5/KCalCore/
+	usr/include/KF5/kcalcore_version.h
+	usr/lib/cmake/KF5CalendarCore/
+	usr/lib/libKF5CalendarCore.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KCalCore.pri
+"
